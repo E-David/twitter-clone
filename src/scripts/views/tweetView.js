@@ -5,7 +5,6 @@ import WriterView from './writerView'
 import $ from 'jquery'
 import Header from './header'
 
-
 var TweetView = React.createClass({
 	getInitialState: function() {
 		return {
@@ -131,16 +130,20 @@ var Tweet = React.createClass({
 
 
 	_getAvatarUrl: function() {
-		var model = this.props.model
-		if(model.get("user").hasOwnProperty("avatarURL")){
+		var model = this.props.model,
+			user = model.get("user")
+
+		if(user !== null && user.hasOwnProperty("avatarURL")){
 			return model.get("user").avatarURL
 		} else {
 			return "https://abs.twimg.com/icons/apple-touch-icon-192x192.png"
 		}
 	},
 	_getUsername: function() {
-		var model = this.props.model
-		if(model.get("user").hasOwnProperty("username")){
+		var model = this.props.model,
+			user = model.get("user")
+
+		if(user !== null && model.get("user").hasOwnProperty("username")){
 			return model.get("user").username
 		} else {
 			return "Unknown"

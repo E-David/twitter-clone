@@ -38,7 +38,7 @@
 				height: auto;
 				width: 40%;
 				margin: 5% auto;
-				background: gray;
+				background: #d3d3d3;
 				border: 2px solid gray;
 				.tweet-header {
 					margin-bottom: 20px;
@@ -69,20 +69,20 @@
 
 				.tweet-nav {
 					display: table;
+					width: 100%;
 					span {
-						width: 50%;
 						font-size: 18px;
 						padding: 2.5% 5%;
 					}
 					span:first-child {
 						display: table-cell;
 						text-align: left;
-						width:40%;
 					}
 					span:last-child {
 						display: table-cell;
 						text-align: right;
-						width:40%;
+						padding-right: 0;
+						margin-right: 0;
 					}
 				}
 			}
